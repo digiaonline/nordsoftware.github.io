@@ -59,8 +59,8 @@ export const makeConfig = (config = {}) => {
 
         // *.css => CSS Modules
         {
-          test: /\.css$/,
-          exclude: /\.global\.css$/,
+          test: /\.scss$/,
+          exclude: /\.global\.scss$/,
           include: path.resolve(__dirname, "web_modules"),
           loader: ExtractTextPlugin.extract(
             "style-loader",
@@ -69,17 +69,17 @@ export const makeConfig = (config = {}) => {
                 ? "[hash:base64:5]"
                 : "[path][name]--[local]--[hash:base64:5]"
               }`,
-              "postcss-loader",
+              "sass-loader",
             ].join("!"),
           ),
         },
         // *.global.css => global (normal) css
         {
-          test: /\.global\.css$/,
+          test: /\.global\.scss$/,
           include: path.resolve(__dirname, "web_modules"),
           loader: ExtractTextPlugin.extract(
             "style-loader",
-            [ "css-loader", "postcss-loader" ].join("!"),
+            [ "css-loader", "sass-loader" ].join("!"),
           ),
         },
         // ! \\
@@ -145,14 +145,14 @@ export const makeConfig = (config = {}) => {
       },
     },
 
-    postcss: () => [
-      require("stylelint")(),
-      require("postcss-cssnext")({ browsers: "last 2 versions" }),
-      require("postcss-reporter")(),
-      ...!config.production ? [
-        require("postcss-browser-reporter")(),
-      ] : [],
-    ],
+    // postcss: () => [
+    //   require("stylelint")(),
+    //   require("postcss-cssnext")({ browsers: "last 2 versions" }),
+    //   require("postcss-reporter")(),
+    //   ...!config.production ? [
+    //     require("postcss-browser-reporter")(),
+    //   ] : [],
+    // ],
 
     plugins: [
       new ExtractTextPlugin("[name].[hash].css", { disable: config.dev }),

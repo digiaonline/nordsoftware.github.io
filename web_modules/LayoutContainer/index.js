@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from "react"
 import Helmet from "react-helmet"
 
 // Import global CSS before other components and their styles
-import "./index.global.css"
-import styles from "./index.css"
+import "./index.global.scss"
+import styles from "./index.scss"
 
 import Header from "../Header"
 import Footer from "../Footer"

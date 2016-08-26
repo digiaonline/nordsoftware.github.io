@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import Helmet from "react-helmet"
 import TopBarProgressIndicator from "react-topbar-progress-indicator"
 
-import styles from "./index.css"
+import styles from "./index.scss"
 
 TopBarProgressIndicator.config({
   barColors: {
