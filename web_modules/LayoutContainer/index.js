@@ -4,9 +4,9 @@ import Helmet from "react-helmet"
 // Import global CSS before other components and their styles
 import "./index.global.scss"
 import styles from "./index.scss"
-
 import Header from "../Header"
 import Footer from "../Footer"
+import "bootstrap-loader"
 
 export default class Layout extends Component {
 
@@ -32,7 +32,9 @@ export default class Layout extends Component {
               process.env.PHENOMIC_NAME } ${ process.env.PHENOMIC_VERSION }`,
             },
             { property: "og:site_name", content: pkg.name },
-            { name: "twitter:site", content: `@${ pkg.twitter }` },
+            { name: "facebook:site", content: `@${ pkg.facebook }` },
+            { name: "repository:site", content: `@${ pkg.repository }` },
+            { name: "linkedin:site", content: `@${ pkg.linkedin }` },
           ] }
           script={ [
             { src: "https://cdn.polyfill.io/v2/polyfill.min.js" },

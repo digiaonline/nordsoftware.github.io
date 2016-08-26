@@ -1,11 +1,6 @@
 import React, { Component, PropTypes } from "react"
 import { Link } from "react-router"
-
 import styles from "./index.scss"
-import Svg from "react-svg-inline"
-import twitterSvg from "../icons/iconmonstr-twitter-1.svg"
-import gitHubSvg from "../icons/iconmonstr-github-1.svg"
-
 export default class Header extends Component {
 
   static contextTypes = {
@@ -13,9 +8,6 @@ export default class Header extends Component {
   };
 
   render() {
-    const {
-      pkg,
-    } = this.context.metadata
 
     return (
       <header className={ styles.header }>
@@ -25,28 +17,19 @@ export default class Header extends Component {
               className={ styles.link }
               to="/"
             >
-              { "Home" }
+              <img src="../../assets/nordlogo.svg" />
             </Link>
           </div>
           <div className={ styles.navPart2 }>
-            { pkg.twitter &&
               <a
-                href={ `https://twitter.com/${pkg.twitter}` }
+                href={ "http://nordsoftware.com/about-us/" }
                 className={ styles.link }
               >
-                <Svg svg={ twitterSvg } />
-                  { "Twitter" }
+                  { "ABOUT US" }
               </a>
-            }
-            { pkg.repository &&
-              <a
-                href={ pkg.repository }
-                className={ styles.link }
-              >
-                <Svg svg={ gitHubSvg } />
-                { "GitHub" }
-              </a>
-            }
+              <Link className={ styles.link } to="/blogs">
+                  { "OUR BLOG" }
+              </Link>
           </div>
         </nav>
       </header>
