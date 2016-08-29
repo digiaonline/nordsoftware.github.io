@@ -87,6 +87,7 @@ export const makeConfig = (config = {}) => {
         { test: /\.(ttf|eot)$/, loader: "file" },
         { test: /bootstrap-sass\/assets\/javascripts\//,
           loader: "imports?jQuery=jquery" },
+
         // ! \\
         // If you want global CSS only, just remove the 2 sections above
         // and use the following one

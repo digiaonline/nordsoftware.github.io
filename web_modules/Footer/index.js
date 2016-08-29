@@ -22,7 +22,7 @@ export default class Footer extends Component {
             href={ `https://facebook.com/${pkg.facebook}` }
             className={ styles.link }
           >
-            <Svg svg={ facebookSvg } />
+            <Svg svg={ facebookSvg } cleanup />
           </a>
         }
         { pkg.repository &&
@@ -30,7 +30,7 @@ export default class Footer extends Component {
             href={ `https://github.com/${pkg.repository}` }
             className={ styles.link }
           >
-            <Svg svg={ gitHubSvg } />
+            <Svg svg={ gitHubSvg } cleanup />
           </a>
         }
         { pkg.linkedin &&
@@ -38,7 +38,7 @@ export default class Footer extends Component {
             href={ `https://linkedin.com/company/${pkg.linkedin}` }
             className={ styles.link }
           >
-            <Svg svg={ linkedInSvg } />
+            <Svg svg={ linkedInSvg } cleanup />
           </a>
         }
       </footer>

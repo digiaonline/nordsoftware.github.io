@@ -1,8 +1,9 @@
 import React, { Component, PropTypes } from "react"
 import { fetchRepoData } from "../../app/api/api"
 import { connect } from "react-redux"
-import { fetchData } from "../../app/actions"
+import { fetchData, searchData } from "../../app/actions"
 import "./index.scss"
+
 class Homepage extends Component {
   static contextTypes = {
     collection: PropTypes.array.isRequired,
@@ -10,22 +11,29 @@ class Homepage extends Component {
   static propTypes = {
     dispatch: PropTypes.oneOfType([ PropTypes.func, PropTypes.object ]),
     repoData: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
+    filterData: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
   };
 
   componentDidMount() {
     const { dispatch } = this.props
     fetchRepoData().then((data) => {
-      console.log(data)
       dispatch(fetchData(data))
     })
   }
 
+  handleSearchRepo(event) {
+    const { dispatch } = this.props
+    dispatch(searchData(event.target.value))
+  }
   render() {
-    const { repoData } = this.props
+    const { filterData } = this.props
     return (
       <div className="homepage">
       <h3> { "Nord open source repo" } </h3>
-      { repoData.map((repo, index) => {
+      <input type="text"  placeholder="Search.. "
+        onChange={ this.handleSearchRepo.bind(this) }
+      />
+      { filterData.map((repo, index) => {
         return (
           <div key={ index } className="col-sm-4">
             <div className="repobox" >
@@ -43,9 +51,9 @@ class Homepage extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log(state)
   return {
     repoData: state.repoReducer.repoData,
+    filterData: state.repoReducer.filterData,
   }
 }
 
