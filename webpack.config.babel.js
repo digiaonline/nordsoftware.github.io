@@ -15,6 +15,7 @@ export const makeConfig = (config = {}) => {
     ...config.dev && {
       devtool: "#cheap-module-eval-source-map",
     },
+    entry: [ "bootstrap-loader" ],
     module: {
       noParse: /\.min\.js/,
       loaders: [

@@ -6,7 +6,6 @@ import "./index.global.scss"
 import styles from "./index.scss"
 import Header from "../Header"
 import Footer from "../Footer"
-import "bootstrap-loader"
 
 export default class Layout extends Component {
 
