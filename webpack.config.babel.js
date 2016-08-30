@@ -161,7 +161,7 @@ export const makeConfig = (config = {}) => {
     // ],
 
     plugins: [
-      new ExtractTextPlugin("[name].[hash].css", { disable: config.dev }),
+      new ExtractTextPlugin("[name].[hash].scss", { disable: config.dev }),
       ...config.production && [
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin(

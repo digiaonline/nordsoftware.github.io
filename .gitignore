@@ -4,3 +4,4 @@ node_modules
 .jsbeautifyrc
 # phenomic build
 dist
+.DS_Store

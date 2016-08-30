@@ -1,20 +1,19 @@
 {
   "private": true,
   "name": "Nord-gh",
-  "homepage": "http://nordsoftware.com/",
-  "facebook": "NordSoftware/",
+  "homepage": "https://midori0507.github.io",
+  "facebook": "NordSoftware",
   "repository": "nordsoftware",
   "linkedin": "nord-software-ltd",
   "scripts": {
     "lint:js": "eslint --ignore-path .gitignore --fix .",
-    "lint:css": "stylelint \"web_modules/**/*.css\"",
     "lint": "npm-run-all --parallel lint:*",
     "start": "phenomic start",
     "build": "phenomic build",
     "pretest": "npm run lint",
     "test": "npm run build",
     "predeploy": "npm run build",
-    "deploy": "deploy.sh"
+    "deploy": "./deploy.sh"
   },
   "phenomic": {
     "CNAME": true
@@ -44,9 +43,6 @@
     }
   },
   "eslintConfigRuleReact/prefer-stateless-function": "https://github.com/MoOx/phenomic/issues/46",
-  "stylelint": {
-    "extends": "stylelint-config-standard"
-  },
   "devDependencies": {
     "babel-cli": "^6.3.17",
     "babel-core": "^6.3.26",
@@ -89,8 +85,6 @@
     "resolve-url-loader": "^1.6.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.12.4",
-    "stylelint": "^6.8.0",
-    "stylelint-config-standard": "^10.0.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.1",
     "whatwg-fetch": "^0.11.0"
