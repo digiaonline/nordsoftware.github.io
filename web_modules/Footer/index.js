@@ -27,7 +27,7 @@ export default class Footer extends Component {
         }
         { pkg.repository &&
           <a
-            href={ `https://github.com/${pkg.repository}` }
+            href={ `${pkg.repository}` }
             className={ styles.link }
           >
             <Svg svg={ gitHubSvg } cleanup />

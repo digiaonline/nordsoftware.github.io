@@ -3,7 +3,7 @@
   "name": "Nord-gh",
   "homepage": "https://nordsoftware.github.io/nordgh/",
   "facebook": "NordSoftware",
-  "repository": "nordsoftware",
+  "repository": "https://github.com/nordsoftware/nordgh.git",
   "linkedin": "nord-software-ltd",
   "scripts": {
     "lint:js": "eslint --ignore-path .gitignore --fix .",
