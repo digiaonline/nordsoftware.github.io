@@ -82,12 +82,6 @@ export const makeConfig = (config = {}) => {
             [ "css-loader", "sass-loader" ].join("!"),
           ),
         },
-
-        { test: /\.(woff2?)$/, loader: "url?limit=10000" },
-        { test: /\.(ttf|eot)$/, loader: "file" },
-        { test: /bootstrap-sass\/assets\/javascripts\//,
-          loader: "imports?jQuery=jquery" },
-
         // ! \\
         // If you want global CSS only, just remove the 2 sections above
         // and use the following one
@@ -122,7 +116,10 @@ export const makeConfig = (config = {}) => {
             "?name=[path][name].[hash].[ext]&context=" +
             path.join(__dirname, config.source),
         },
-
+        { test: /\.(woff2?)$/, loader: "url?limit=10000" },
+        { test: /\.(ttf|eot)$/, loader: "file" },
+        { test: /bootstrap-sass\/assets\/javascripts\//,
+          loader: "imports?jQuery=jquery" },
         // svg as raw string to be inlined
         {
           test: /\.svg$/,
@@ -151,17 +148,17 @@ export const makeConfig = (config = {}) => {
       },
     },
 
-    // postcss: () => [
-    //   require("stylelint")(),
-    //   require("postcss-cssnext")({ browsers: "last 2 versions" }),
-    //   require("postcss-reporter")(),
-    //   ...!config.production ? [
-    //     require("postcss-browser-reporter")(),
-    //   ] : [],
-    // ],
+    postcss: () => [
+      require("stylelint")(),
+      require("postcss-cssnext")({ browsers: "last 2 versions" }),
+      require("postcss-reporter")(),
+      ...!config.production ? [
+        require("postcss-browser-reporter")(),
+      ] : [],
+    ],
 
     plugins: [
-      new ExtractTextPlugin("[name].[hash].scss", { disable: config.dev }),
+      new ExtractTextPlugin("[name].[hash].css", { disable: config.dev }),
       ...config.production && [
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin(
