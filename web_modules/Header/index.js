@@ -17,7 +17,7 @@ export default class Header extends Component {
               className={ styles.link }
               to="/"
             >
-              <img src="../../assets/nordlogo.svg" />
+              <img src="/assets/nordlogo.svg" />
             </Link>
           </div>
           <div className={ styles.navPart2 }>
