@@ -17,7 +17,7 @@ export default class Header extends Component {
               className={ styles.link }
               to="/"
             >
-              <img src="/assets/nordlogo.svg" />
+              <img src="assets/nordlogo.svg" />
             </Link>
           </div>
           <div className={ styles.navPart2 }>
@@ -28,7 +28,7 @@ export default class Header extends Component {
                   { "ABOUT US" }
               </a>
               <Link className={ styles.link } to="/blogs">
-                  { "OUR BLOG" }
+                  { "OUR BlOG" }
               </Link>
           </div>
         </nav>

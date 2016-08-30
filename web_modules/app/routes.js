@@ -9,7 +9,7 @@ import PageError from "../layouts/PageError"
 import PageLoading from "../layouts/PageLoading"
 import Homepage from "../layouts/Homepage"
 import Post from "../layouts/Post"
-
+import Blog from "../Blog"
 class PageContainer extends Component {
   render() {
     const { props } = this
@@ -30,6 +30,7 @@ class PageContainer extends Component {
 
 export default (
   <Route component={ LayoutContainer }>
+    <Route path="blogs" component={ Blog } />
     <Route path="*" component={ PageContainer } />
   </Route>
 )

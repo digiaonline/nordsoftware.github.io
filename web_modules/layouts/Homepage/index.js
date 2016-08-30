@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from "react"
 import { fetchRepoData } from "../../app/api/api"
 import { connect } from "react-redux"
 import { fetchData, searchData } from "../../app/actions"
+
 import "./index.scss"
 
 class Homepage extends Component {
