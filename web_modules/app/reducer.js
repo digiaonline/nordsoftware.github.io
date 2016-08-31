@@ -11,8 +11,8 @@ const repoReducer = (state = initialState, action) => {
   switch (action.type) {
   case FETCH_DATA:
     return Object.assign({}, state, {
-      repoData: state.repoData.concat(action.data),
-      filterData: state.filterData.concat(action.data),
+      repoData: state.repoData.concat(action.filterdata),
+      filterData: state.filterData.concat(action.filterdata),
     })
   case SEARCH_DATA:
     return Object.assign({}, state, {
