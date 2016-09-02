@@ -13,7 +13,7 @@ export default class Header extends Component {
         <nav className={ styles.nav }>
           <div className={ styles.navPart1 }>
             <a
-              href={ "http://nordsoftware.com/" }
+              href={ "http://nordsoftware.com/en/" }
               className={ styles.link }
             >
               <img src="assets/nordlogo.svg" />
