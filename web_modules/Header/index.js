@@ -22,14 +22,17 @@ export default class Header extends Component {
           </div>
           <div className={ styles.navPart2 }>
               <a
-                href={ "http://nordsoftware.com/about-us/" }
+                href={ "http://nordsoftware.com/en/about-us/" }
                 className={ styles.link }
               >
-                  { "ABOUT US" }
+                  { "About us" }
               </a>
-              <Link className={ styles.link } to="/blogs">
-                  { "OUR BlOG" }
-              </Link>
+              <a
+                href={ "http://nordsoftware.com/en/blog/" }
+                className={ styles.link }
+              >
+                  { "Blog" }
+              </a>
           </div>
         </nav>
       </header>
