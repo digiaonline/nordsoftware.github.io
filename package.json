@@ -2,8 +2,9 @@
   "private": true,
   "name": "Nord-gh",
   "homepage": "https://nordsoftware.github.io/nordgh/",
-  "facebook": "NordSoftware",
+  "twitter": "nordsoftware",
   "repository": "https://github.com/nordsoftware/nordgh.git",
+  "github": "https://github.com/nordsoftware",
   "linkedin": "nord-software-ltd",
   "scripts": {
     "lint:js": "eslint --ignore-path .gitignore --fix .",
@@ -13,7 +14,8 @@
     "pretest": "npm run lint",
     "test": "npm run build",
     "predeploy": "npm run build",
-    "deploy": "./scripts/deploy.sh"
+    "deploy": "./scripts/deploy_test.sh",
+    "deploy production": "./scripts/deploy_production.sh"
   },
   "phenomic": {
     "CNAME": true

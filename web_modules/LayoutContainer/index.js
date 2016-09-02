@@ -31,7 +31,7 @@ export default class Layout extends Component {
               process.env.PHENOMIC_NAME } ${ process.env.PHENOMIC_VERSION }`,
             },
             { property: "og:site_name", content: pkg.name },
-            { name: "facebook:site", content: `@${ pkg.facebook }` },
+            { name: "twitter:site", content: `@${ pkg.twitter }` },
             { name: "repository:site", content: `@${ pkg.repository }` },
             { name: "linkedin:site", content: `@${ pkg.linkedin }` },
           ] }
@@ -50,16 +50,19 @@ export default class Layout extends Component {
           ] }
           link={ [
             { rel: "apple-touch-icon",
-              href: "/apple-touch-icon.png", sizes:"180x180",
+              href: "assets/apple-touch-icon.png", sizes:"180x180",
             },
             { rel: "icon", type:"image/png",
-              href: "/favicon-32x32.png", sizes:"32x32",
+              href: "assets/favicon-32x32.png", sizes:"32x32",
             },
             { rel: "icon", type:"image/png",
-              href: "/favicon-16x16.png", sizes:"16x16",
+              href: "assets/favicon-16x16.png", sizes:"16x16",
             },
-            { rel: "manifest", href: "/manifest.json" } ,
-            { rel: "mask-icon", href: "/safari-pinned-tab.svg",
+            { rel: "icon", type:"image/png",
+              href: "assets/android-chrome-192x192.png", sizes:"192x192",
+            },
+            { rel: "manifest", href: "assets/manifest.json" } ,
+            { rel: "mask-icon", href: "assets/safari-pinned-tab.svg",
               color: "#5bbad5",
             },
           ] }

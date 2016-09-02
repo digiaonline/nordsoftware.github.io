@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from "react"
 import styles from "./index.scss"
 import Svg from "react-svg-inline"
-import facebookSvg from "../icons/iconmonstr-facebook-4.svg"
+import twitterSvg from "../icons/iconmonstr-twitter-5.svg"
 import gitHubSvg from "../icons/iconmonstr-github-1.svg"
 import linkedInSvg from "../icons/iconmonstr-linkedin-5.svg"
 export default class Footer extends Component {
@@ -17,12 +17,12 @@ export default class Footer extends Component {
 
     return (
       <footer className={ styles.footer }>
-      { pkg.facebook &&
+      { pkg.twitter &&
           <a
-            href={ `https://facebook.com/${pkg.facebook}` }
+            href={ `https://twitter.com/${pkg.twitter}` }
             className={ styles.link }
           >
-            <Svg svg={ facebookSvg } cleanup />
+            <Svg svg={ twitterSvg } cleanup />
           </a>
         }
         { pkg.repository &&
