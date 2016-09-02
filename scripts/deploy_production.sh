@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
-GIT_DEPLOY_REPO=${GIT_DEPLOY_REPO:-$(node -e 'process.stdout.write(require("./package.json").github)')}
 
 cd dist && \
 $(npm bin)/rimraf .git
 git init && \
 git add . && \
 git commit -m "Deploy to GitHub Pages" && \
-git push --force "${GIT_DEPLOY_REPO}" src:master
+git push --force https://github.com/nordsoftware/nordsoftware.github.io.git src:master
