@@ -1,4 +1,4 @@
 ---
-title: Nord Software open source
+title: Open source at Nord Software
 layout: Homepage
 ---
