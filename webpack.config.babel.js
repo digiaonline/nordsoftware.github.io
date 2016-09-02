@@ -112,13 +112,15 @@ export const makeConfig = (config = {}) => {
 
         // copy assets and return generated path in js
         {
-          test: /\.(html|ico|jpe?g|png|xml|gif)$/,
+          test: /\.(html|ico|jpe?g|png|gif)$/,
           loader: "file-loader" +
             "?name=[path][name].[hash].[ext]&context=" +
             path.join(__dirname, config.source),
         },
         { test: /\.(woff2?)$/, loader: "url?limit=10000" },
         { test: /\.(ttf|eot)$/, loader: "file" },
+        { test: /\.xml/, loader: "file?name=[path][name].[ext]&context=",
+        },
         { test: /bootstrap-sass\/assets\/javascripts\//,
           loader: "imports?jQuery=jquery" },
         // svg as raw string to be inlined

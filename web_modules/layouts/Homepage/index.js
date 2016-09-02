@@ -5,7 +5,7 @@ import { fetchData, searchData, stopFetchingData } from "../../app/actions"
 import InfiniteScroll from "react-infinite-scroller"
 import RepoList from "../../RepoList"
 import "./index.scss"
-
+import "../../../browserconfig.xml"
 class Homepage extends Component {
   static contextTypes = {
     collection: PropTypes.array.isRequired,

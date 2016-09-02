@@ -5,4 +5,4 @@ $(npm bin)/rimraf .git
 git init && \
 git add . && \
 git commit -m "Deploy to GitHub Pages" && \
-git push --force https://github.com/nordsoftware/nordsoftware.github.io.git src:master
+git push --force https://github.com/nordsoftware/nordsoftware.github.io.git master
