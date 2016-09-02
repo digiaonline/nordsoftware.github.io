@@ -2,9 +2,10 @@
   "private": true,
   "name": "Nord-gh",
   "homepage": "https://nordsoftware.github.io/nordgh/",
-  "facebook": "NordSoftware",
+  "github": "https://github.com/nordsoftware/nordgh",
   "repository": "https://github.com/nordsoftware/nordgh.git",
   "linkedin": "nord-software-ltd",
+  "twitter": "nordsoftware",
   "scripts": {
     "lint:js": "eslint --ignore-path .gitignore --fix .",
     "lint": "npm-run-all --parallel lint:*",

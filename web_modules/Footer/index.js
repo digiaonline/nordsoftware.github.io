@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from "react"
 import styles from "./index.scss"
 import Svg from "react-svg-inline"
-import facebookSvg from "../icons/iconmonstr-facebook-4.svg"
 import gitHubSvg from "../icons/iconmonstr-github-1.svg"
 import linkedInSvg from "../icons/iconmonstr-linkedin-5.svg"
+import twitterSvg from "../icons/iconmonstr-twitter-5.svg"
 export default class Footer extends Component {
 
   static contextTypes = {
@@ -17,20 +17,20 @@ export default class Footer extends Component {
 
     return (
       <footer className={ styles.footer }>
-      { pkg.facebook &&
+        { pkg.github &&
           <a
-            href={ `https://facebook.com/${pkg.facebook}` }
-            className={ styles.link }
-          >
-            <Svg svg={ facebookSvg } cleanup />
-          </a>
-        }
-        { pkg.repository &&
-          <a
-            href={ `${pkg.repository}` }
+            href={ `${pkg.github}` }
             className={ styles.link }
           >
             <Svg svg={ gitHubSvg } cleanup />
+          </a>
+        }
+        { pkg.twitter &&
+          <a
+            href={ `https://twitter.com/${pkg.twitter}` }
+            className={ styles.link }
+          >
+            <Svg svg={ twitterSvg } cleanup />
           </a>
         }
         { pkg.linkedin &&
