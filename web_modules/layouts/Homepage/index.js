@@ -45,15 +45,15 @@ class Homepage extends Component {
     const { filterData, hasMore } = this.props
     return (
       <div className="homepage">
-      <h3> { "Nord open source repo" } </h3>
-      <input type="text"  placeholder="Search.. "
+      <h3> { "Open source at Nord Software" } </h3>
+      <input type="text"  placeholder="Search…"
         onChange={ this.handleSearchRepo.bind(this) }
       />
       <InfiniteScroll
         pageStart={ 0 }
         loadMore={ this.loadRepoData.bind(this) }
         hasMore={ hasMore }
-        loader={ <div className="ball-loader">Loading ...</div> }
+        loader={ <div className="ball-loader">Loading…</div> }
       >
           <RepoList repoList={ filterData } />
       </InfiniteScroll>
