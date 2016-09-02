@@ -1,0 +1,78 @@
+
+h3{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+input{
+  display: block;
+  margin: 50px 15px !important;
+  width: calc(100% - 30px);
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+
+$preloader_size: 15px;
+$preloader_left_round: #1b436b;
+$preloader_right_round: #fefefe;
+$preloader_time: 1.8s;
+
+.ball-loader{
+
+  width: 100%;
+  height: 100%;
+  background-color: #3F51B5;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 998;
+
+  &:before, &:after{
+
+    content: "";
+    display: block;
+
+    width: $preloader_size;
+    height: $preloader_size;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+  }
+
+  &:before{
+    background-color: $preloader_left_round;
+    left: 50%;
+    animation: animation_left_round $preloader_time infinite ease-in-out;
+  }
+
+  &:after{
+    background-color: $preloader_right_round;
+    right: 50%;
+    animation: animation_right_round $preloader_time infinite ease-in-out;
+  }
+}
+
+@keyframes animation_left_round{
+
+	0%, 100%{
+		transform: translate3d(50%, -50%, 0);
+	}
+
+	50%{
+		transform: translate3d(-150%, -50%, 0);
+	}
+}
+
+@keyframes animation_right_round{
+
+	0%, 100%{
+		transform: translate3d(-50%, -50%, 0);
+	}
+
+	50%{
+		transform: translate3d(150%, -50%, 0);
+	}
+}
