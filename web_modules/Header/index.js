@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from "react"
-import { Link } from "react-router"
 import styles from "./index.scss"
 export default class Header extends Component {
 
@@ -13,12 +12,12 @@ export default class Header extends Component {
       <header className={ styles.header }>
         <nav className={ styles.nav }>
           <div className={ styles.navPart1 }>
-            <Link
+            <a
+              href={ "http://nordsoftware.com/" }
               className={ styles.link }
-              to="/"
             >
               <img src="assets/nordlogo.svg" />
-            </Link>
+            </a>
           </div>
           <div className={ styles.navPart2 }>
               <a
