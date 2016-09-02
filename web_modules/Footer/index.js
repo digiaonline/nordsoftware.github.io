@@ -25,7 +25,7 @@ export default class Footer extends Component {
             <Svg svg={ twitterSvg } cleanup />
           </a>
         }
-        { pkg.repository &&
+        { pkg.github &&
           <a
             href={ `${pkg.github}` }
             className={ styles.link }
