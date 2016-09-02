@@ -4,7 +4,7 @@
   "homepage": "https://nordsoftware.github.io/nordgh/",
   "twitter": "nordsoftware",
   "repository": "https://github.com/nordsoftware/nordgh.git",
-  "github": "https://github.com/nordsoftware",
+  "github": "https://github.com/nordsoftware.github.io.git",
   "linkedin": "nord-software-ltd",
   "scripts": {
     "lint:js": "eslint --ignore-path .gitignore --fix .",

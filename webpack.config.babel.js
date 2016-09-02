@@ -112,7 +112,7 @@ export const makeConfig = (config = {}) => {
 
         // copy assets and return generated path in js
         {
-          test: /\.(html|ico|jpe?g|png|gif)$/,
+          test: /\.(html|ico|jpe?g|png|gif,xml)$/,
           loader: "file-loader" +
             "?name=[path][name].[hash].[ext]&context=" +
             path.join(__dirname, config.source),
