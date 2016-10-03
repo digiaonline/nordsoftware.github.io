@@ -14,7 +14,7 @@
     "pretest": "npm run lint",
     "test": "npm run build",
     "predeploy": "npm run build",
-    "deploy": "./scripts/deploy.sh"
+    "deploy": "sh ./scripts/deploy.sh"
   },
   "phenomic": {
     "CNAME": true
@@ -39,6 +39,7 @@
       "eslint-config-i-am-meticulous/react"
     ],
     "rules": {
+      "max-len": ["error", 140, 2],
       "react/prefer-stateless-function": 0,
       "react/jsx-no-bind": 0,
       "react/jsx-no-literals": 0
@@ -87,6 +88,7 @@
     "redux": "^3.0.0",
     "resolve-url-loader": "^1.6.0",
     "sass-loader": "^4.0.0",
+    "source-map-support": "^0.4.2",
     "style-loader": "^0.12.4",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.1",
