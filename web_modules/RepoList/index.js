@@ -17,9 +17,13 @@ class RepoList extends Component {
                 <p>{ repo.description }</p>
               </a>
               <p>
-                <a href={ `${ repo.html_url }/watchers` } ><img src={ `https://img.shields.io/github/watchers/nordsoftware/${ repo.name }.svg?style=social&label=Watchers` } /></a>
+                <a href={ `${ repo.html_url }/watchers` } >
+                  <img src={ `https://img.shields.io/github/watchers/nordsoftware/${ repo.name }.svg?style=social&label=Watchers` } />
+                </a>
                 &nbsp;
-                <a href={ `${ repo.html_url }/stargazers` } ><img src={ `https://img.shields.io/github/stars/nordsoftware/${ repo.name }.svg?style=social&label=Stars` } /></a>
+                <a href={ `${ repo.html_url }/stargazers` } >
+                  <img src={ `https://img.shields.io/github/stars/nordsoftware/${ repo.name }.svg?style=social&label=Stars` } />
+                </a>
               </p>
             </div>
           </div>
