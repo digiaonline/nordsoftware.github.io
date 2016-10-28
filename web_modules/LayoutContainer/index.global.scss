@@ -87,7 +87,7 @@ a {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  a, a:hover{
+  a, a:hover, a:focus{
     text-decoration: none;
     color: black;
   }
@@ -111,7 +111,7 @@ a {
     &:last-child{
       justify-content: space-between;
       display: flex;
-      padding: 20px;
+      padding: 0 20px;
       font-size: 1.3rem;
     }
   }
