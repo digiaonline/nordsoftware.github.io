@@ -84,6 +84,9 @@ a {
 .repobox{
   word-wrap: break-word;
   text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   a, a:hover{
     text-decoration: none;
     color: black;
@@ -101,7 +104,13 @@ a {
       font-size: 1.8rem;
       padding: 20px;
     }
+    &:nth-child(2){
+      overflow: hidden;
+      height: 50px;
+    }
     &:last-child{
+      justify-content: space-between;
+      display: flex;
       padding: 20px;
       font-size: 1.3rem;
     }
