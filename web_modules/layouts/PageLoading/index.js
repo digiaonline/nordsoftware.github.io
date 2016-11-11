@@ -18,7 +18,7 @@ export default class PageLoading extends Component {
     return (
       <div>
         <Helmet
-          title={ "Nord Software's Open Source" }
+          title={ "Loading..." }
         />
         <TopBarProgressIndicator />
         <div className={ styles.loader }>

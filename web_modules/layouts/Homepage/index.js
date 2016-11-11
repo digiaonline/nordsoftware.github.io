@@ -6,6 +6,8 @@ import InfiniteScroll from "react-infinite-scroller"
 import RepoList from "../../RepoList"
 import "./index.scss"
 import "../../../browserconfig.xml"
+import Helmet from "react-helmet"
+
 class Homepage extends Component {
   static contextTypes = {
     collection: PropTypes.array.isRequired,
@@ -45,6 +47,9 @@ class Homepage extends Component {
     const { filterData, hasMore } = this.props
     return (
       <div className="homepage">
+      <Helmet
+        title={ "Open source at Nord Software" }
+      />
       <h3> { "Open source at Nord Software" } </h3>
       <input type="text"  placeholder="Search…"
         onChange={ this.handleSearchRepo.bind(this) }
