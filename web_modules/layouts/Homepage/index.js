@@ -5,12 +5,16 @@ import { fetchData, searchData, stopFetchingData } from "../../app/actions"
 import InfiniteScroll from "react-infinite-scroller"
 import RepoList from "../../RepoList"
 import "./index.scss"
+import styles from "./index.scss"
 import "../../../browserconfig.xml"
+import invariant from "invariant"
 import Helmet from "react-helmet"
+import { joinUri } from "phenomic"
 
 class Homepage extends Component {
   static contextTypes = {
     collection: PropTypes.array.isRequired,
+    metadata: PropTypes.object.isRequired,
   }
   static propTypes = {
     dispatch: PropTypes.oneOfType([ PropTypes.func, PropTypes.object ]),
@@ -45,10 +49,47 @@ class Homepage extends Component {
   }
   render() {
     const { filterData, hasMore } = this.props
+
+    const { props, context } = this
+
+    const {
+      pkg,
+    } = context.metadata
+
+    const {
+      __filename,
+      __url,
+      head,
+    } = props
+    console.log(context)
+    invariant(
+      typeof head.title === "string",
+      `Your page '${ __filename }' needs a title`
+    )
+
+    const metaTitle = head.metaTitle ? head.metaTitle : head.title
+
+    const meta = [
+      { property: "og:type", content: "article" },
+      { property: "og:title", content: metaTitle },
+      {
+        property: "og:url",
+        content: joinUri(process.env.PHENOMIC_USER_URL, __url),
+      },
+      { property: "og:description", content: head.description },
+      { property: "og:image", content: "assets/nordlogo.svg" },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: metaTitle },
+      { name: "twitter:creator", content: `@${ pkg.twitter }` },
+      { name: "twitter:description", content: head.description },
+      { name: "description", content: head.description },
+    ]
+
     return (
       <div className="homepage">
       <Helmet
-        title={ "Open source at Nord Software" }
+        title={ metaTitle }
+        meta={ meta }
       />
       <h3> { "Open source at Nord Software" } </h3>
       <input type="text"  placeholder="Search…"
@@ -58,6 +99,11 @@ class Homepage extends Component {
         pageStart={ 0 }
         loadMore={ this.loadRepoData.bind(this) }
         hasMore={ hasMore }
+        loader={
+          <div className={ styles.loader }>
+            <div className={ styles.spinner }></div>
+          </div>
+        }
       >
           <RepoList repoList={ filterData } />
       </InfiniteScroll>

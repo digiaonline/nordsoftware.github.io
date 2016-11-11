@@ -41,7 +41,6 @@ class Page extends Component {
       { name: "twitter:description", content: head.description },
       { name: "description", content: head.description },
     ]
-
     return (
       <div>
         <Helmet
