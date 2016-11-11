@@ -7,7 +7,6 @@ import RepoList from "../../RepoList"
 import "./index.scss"
 import styles from "./index.scss"
 import "../../../browserconfig.xml"
-import invariant from "invariant"
 import Helmet from "react-helmet"
 import { joinUri } from "phenomic"
 
@@ -57,15 +56,9 @@ class Homepage extends Component {
     } = context.metadata
 
     const {
-      __filename,
       __url,
       head,
     } = props
-    console.log(context)
-    invariant(
-      typeof head.title === "string",
-      `Your page '${ __filename }' needs a title`
-    )
 
     const metaTitle = head.metaTitle ? head.metaTitle : head.title
 
@@ -77,7 +70,7 @@ class Homepage extends Component {
         content: joinUri(process.env.PHENOMIC_USER_URL, __url),
       },
       { property: "og:description", content: head.description },
-      { property: "og:image", content: "assets/nordlogo.svg" },
+      { property: "og:image", content: "assets/favicon-96x96.png" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:title", content: metaTitle },
       { name: "twitter:creator", content: `@${ pkg.twitter }` },
