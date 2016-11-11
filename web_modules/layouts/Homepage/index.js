@@ -58,7 +58,6 @@ class Homepage extends Component {
         pageStart={ 0 }
         loadMore={ this.loadRepoData.bind(this) }
         hasMore={ hasMore }
-        loader={ <div className="ball-loader">Loading…</div> }
       >
           <RepoList repoList={ filterData } />
       </InfiniteScroll>
