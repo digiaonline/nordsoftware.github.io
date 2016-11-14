@@ -30,7 +30,7 @@ export default class Layout extends Component {
               name: "generator", content: `${
               process.env.PHENOMIC_NAME } ${ process.env.PHENOMIC_VERSION }`,
             },
-            { property: "og:site_name", content: pkg.name },
+            { property: "og:site_name", content: "Nord Software" },
             { name: "twitter:site", content: `@${ pkg.twitter }` },
             { name: "repository:site", content: `@${ pkg.repository }` },
             { name: "linkedin:site", content: `@${ pkg.linkedin }` },

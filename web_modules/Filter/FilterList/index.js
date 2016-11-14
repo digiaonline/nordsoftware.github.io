@@ -2,11 +2,14 @@ import React, { PropTypes } from "react"
 import toLower from "lodash/toLower"
 import { connect } from "react-redux"
 import { filterBy } from "../../app/actions"
+import classNames from "classnames"
+import includes from "lodash/includes"
 
 class FilterItem extends React.Component {
   static propTypes = {
     dispatch: PropTypes.oneOfType([ PropTypes.func, PropTypes.object ]),
     items: PropTypes.array,
+    currentFilters: PropTypes.string,
   };
 
   constructor(props) {
@@ -19,14 +22,14 @@ class FilterItem extends React.Component {
   }
 
   render() {
-    const { items } = this.props
+    const { items, currentFilters } = this.props
 
     return (
       <div className="homepage--languages-list">
         { items.map((item, index) => {
           return (
           <span key={ index }
-            className={ toLower(item) }
+            className={ classNames(toLower(item), { "selected" : includes(currentFilters, item) }) }
             onClick={ this.filterByLang.bind(this, item) }
           >
             { item }
@@ -38,4 +41,10 @@ class FilterItem extends React.Component {
 
 }
 
-export default connect()(FilterItem)
+function mapStateToProps(state) {
+  return {
+    currentFilters: state.repoReducer.currentFilters,
+  }
+}
+
+export default connect(mapStateToProps)(FilterItem)
