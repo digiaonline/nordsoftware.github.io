@@ -83,9 +83,9 @@ a {
   color: #0e63e3;
 }
 .repobox{
-  transition: transform 0.1s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   &:hover{
-    transform: scale(1.01);
+    transform: translateY(-3px);
   }
   position: relative;
   word-wrap: break-word;
@@ -123,6 +123,8 @@ a {
       line-height: 2rem;
       overflow: hidden;
       min-height: 10rem;
+      max-height: 10rem;
+      overflow: hidden;
     }
   }
   i{
