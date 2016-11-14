@@ -6,8 +6,9 @@
  *
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  */
-@import url(https://fonts.googleapis.com/css?family=Roboto);
 
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css);
 html { box-sizing: border-box; }
 
 *,
@@ -82,6 +83,11 @@ a {
   color: #0e63e3;
 }
 .repobox{
+  transition: transform 0.1s ease-in-out;
+  &:hover{
+    transform: scale(1.01);
+  }
+  position: relative;
   word-wrap: break-word;
   text-decoration: none;
   display: flex;
@@ -95,7 +101,12 @@ a {
   border-radius: 4px;
   margin-top: 15px;
   margin-bottom: 15px;
-  min-height: 240px;
+  &--icons{
+    justify-content: space-between;
+    display: flex;
+    padding: 20px;
+    font-size: 1.3rem;
+  }
   p{
     &:first-child{
       background-color: #F2F2F2;
@@ -104,18 +115,50 @@ a {
       font-size: 1.8rem;
       padding: 20px;
     }
-    &:nth-child(2){
-      overflow: hidden;
-      height: 50px;
-    }
     &:last-child{
       justify-content: space-between;
       display: flex;
-      padding: 0 20px;
-      font-size: 1.3rem;
+      padding: 20px 0 20px 20px;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      overflow: hidden;
+      min-height: 10rem;
     }
+  }
+  i{
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 2.5rem;
   }
 }
 .homepage{
+  min-width: 400px;
   overflow: auto;
+  &--languages-list{
+    margin: 0 15px 50px 15px;
+    display: flex;
+    flex-direction: row;
+    span{
+      background-color: black;
+      padding: 5px 15px;
+      margin-right: 5px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      color: white;
+    }
+  }
+
+  h3{
+    text-align: center;
+    font-size: 2rem;
+  }
+  input{
+    display: block;
+    margin: 50px 0 15px 15px;
+    width: calc(100% - 30px);
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+
 }

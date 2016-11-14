@@ -1,4 +1,4 @@
-import { FETCH_DATA, SEARCH_DATA, STOP_FETCH } from "./actions"
+import { FETCH_DATA, SEARCH_DATA, STOP_FETCH, FILTER_BY } from "./actions"
 import { createFilter } from "react-search-input"
 
 const initialState = {
@@ -21,6 +21,10 @@ const repoReducer = (state = initialState, action) => {
     })
   case STOP_FETCH:
     return Object.assign({}, state, { hasMore: false })
+  case FILTER_BY:
+    return Object.assign({}, state, {
+      filterData: state.repoData.filter((repo) => repo.language === action.lang),
+    })
   default:
     return state
   }

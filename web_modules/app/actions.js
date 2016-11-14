@@ -1,6 +1,7 @@
 export const FETCH_DATA = "FETCH_DATA"
 export const SEARCH_DATA = "SEARCH_DATA"
 export const STOP_FETCH = "STOP_FETCH"
+export const FILTER_BY = "FILTER_BY"
 
 const featureRepos = [
   "lumen-core",
@@ -38,4 +39,9 @@ export const searchData = (searchText) => ({
 
 export const stopFetchingData = () => ({
   type: STOP_FETCH,
+})
+
+export const filterBy = (lang) => ({
+  type: FILTER_BY,
+  lang,
 })

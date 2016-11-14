@@ -4,9 +4,13 @@ import { connect } from "react-redux"
 import { fetchData, searchData, stopFetchingData } from "../../app/actions"
 import InfiniteScroll from "react-infinite-scroller"
 import RepoList from "../../RepoList"
+import FilterList from "../../Filter/FilterList"
 import "./index.scss"
 import styles from "./index.scss"
 import "../../../browserconfig.xml"
+import uniq from "lodash/uniq"
+import map from "lodash/map"
+import flatten from "lodash/flatten"
 import Helmet from "react-helmet"
 import { joinUri } from "phenomic"
 
@@ -47,8 +51,8 @@ class Homepage extends Component {
     dispatch(searchData(event.target.value))
   }
   render() {
-    const { filterData, hasMore } = this.props
-
+    const { filterData, repoData, hasMore } = this.props
+    const languages = uniq(map(flatten(repoData), "language"))
     const { props, context } = this
 
     const {
@@ -90,6 +94,7 @@ class Homepage extends Component {
       <input type="text"  placeholder="Search…"
         onChange={ this.handleSearchRepo.bind(this) }
       />
+      <FilterList items={ languages } />
       <InfiniteScroll
         pageStart={ 0 }
         loadMore={ this.loadRepoData.bind(this) }

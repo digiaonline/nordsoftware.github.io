@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from "react"
+import toLower from "lodash/toLower"
 
 class RepoList extends Component {
   static propTypes = {
@@ -9,14 +10,16 @@ class RepoList extends Component {
     return (
       <div>
       { this.props.repoList.map((repo, index) => {
+        const langicon = `devicon-${toLower(repo.language)}-plain`
         return (
           <div key={ index } className="col-sm-4">
             <div className="repobox" >
+              <i className={ langicon }></i>
               <a href={ repo.html_url }>
                 <p>{ repo.name }</p>
                 <p>{ repo.description }</p>
               </a>
-              <p>
+              <div className="repobox--icons">
                 <a href={ `${ repo.html_url }/watchers` } >
                   <img src={ `https://img.shields.io/github/watchers/nordsoftware/${ repo.name }.svg?style=social&label=Watchers` } />
                 </a>
@@ -24,7 +27,7 @@ class RepoList extends Component {
                 <a href={ `${ repo.html_url }/stargazers` } >
                   <img src={ `https://img.shields.io/github/stars/nordsoftware/${ repo.name }.svg?style=social&label=Stars` } />
                 </a>
-              </p>
+              </div>
             </div>
           </div>
         )
