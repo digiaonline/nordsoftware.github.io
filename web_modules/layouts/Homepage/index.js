@@ -1,31 +1,16 @@
 import React, { Component, PropTypes } from "react"
-import { fetchRepoData } from "../../app/api/api"
-import { connect } from "react-redux"
-import { fetchData, searchData, stopFetchingData } from "../../app/actions"
 import InfiniteScroll from "react-infinite-scroller"
-import RepoList from "../../RepoList"
-import FilterList from "../../Filter/FilterList"
-import "./index.scss"
-import styles from "./index.scss"
-import "../../../browserconfig.xml"
-import uniq from "lodash/uniq"
-import map from "lodash/map"
-import flatten from "lodash/flatten"
+import { connect } from "react-redux"
 import Helmet from "react-helmet"
 import { joinUri } from "phenomic"
 
-class Homepage extends Component {
-  static contextTypes = {
-    collection: PropTypes.array.isRequired,
-    metadata: PropTypes.object.isRequired,
-  }
-  static propTypes = {
-    dispatch: PropTypes.oneOfType([ PropTypes.func, PropTypes.object ]),
-    repoData: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
-    filterData: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
-    hasMore: PropTypes.bool,
-  };
+import "../../../browserconfig.xml"
 
+import { fetchRepoData } from "../../app/api/api"
+import { fetchData, stopFetchingData } from "../../app/actions"
+import RepoList from "../../RepoList"
+
+class Homepage extends Component {
   componentDidMount() {
     const { dispatch } = this.props
     fetchRepoData(0).then((data) => {
@@ -46,13 +31,8 @@ class Homepage extends Component {
     })
   }
 
-  handleSearchRepo(event) {
-    const { dispatch } = this.props
-    dispatch(searchData(event.target.value))
-  }
   render() {
-    const { filterData, repoData, hasMore } = this.props
-    const languages = uniq(map(flatten(repoData), "language"))
+    const { filterData, hasMore } = this.props
     const { props, context } = this
 
     const {
@@ -86,32 +66,50 @@ class Homepage extends Component {
 
     return (
       <div className="homepage">
-      <Helmet
-        title={ metaTitle }
-        meta={ meta }
-      />
-      <h3> { "Open source at Nord Software" } </h3>
-      <input type="text"  placeholder="Search…"
-        onChange={ this.handleSearchRepo.bind(this) }
-      />
-      <FilterList items={ languages } />
-      <InfiniteScroll
-        pageStart={ 0 }
-        loadMore={ this.loadRepoData.bind(this) }
-        hasMore={ hasMore }
-        loader={
-          <div className={ styles.loader }>
-            <div className={ styles.spinner }></div>
+        <Helmet
+          title={ metaTitle }
+          meta={ meta }
+        />
+        <div className="row hero-container">
+          <div className="col-md-8">
+            <div className="hero">
+              <div className="content">
+                <h1>OPEN SOURCE</h1>
+                <p className="ingress">
+                  Our products and libraries are used by thousands of individuals, teams, and companies including Dropbox and.
+                </p>
+              </div>
+            </div>
           </div>
-        }
-      >
-          <RepoList repoList={ filterData } />
-      </InfiniteScroll>
+          <div className="rotating-box animated infinite flash" />
+        </div>
+        <div className="row">
+          <div className="col-sm-12 repo-container">
+            <InfiniteScroll
+              pageStart={ 0 }
+              loadMore={ this.loadRepoData.bind(this) }
+              hasMore={ hasMore }
+            >
+                <RepoList repoList={ filterData } />
+            </InfiniteScroll>
+          </div>
+        </div>
       </div>
     )
   }
 }
 
+Homepage.contextTypes = {
+  collection: PropTypes.array.isRequired,
+  metadata: PropTypes.object.isRequired,
+}
+
+Homepage.propTypes = {
+  dispatch: PropTypes.oneOfType([ PropTypes.func, PropTypes.object ]),
+  repoData: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
+  filterData: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
+  hasMore: PropTypes.bool,
+}
 function mapStateToProps(state) {
   return {
     repoData: state.repoReducer.repoData,

@@ -7,15 +7,7 @@ import styles from "./index.scss"
 import Header from "../Header"
 import Footer from "../Footer"
 
-export default class Layout extends Component {
-
-  static propTypes = {
-    children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
-  };
-
-  static contextTypes = {
-    metadata: PropTypes.object.isRequired,
-  };
+class Layout extends Component {
 
   render() {
     const {
@@ -78,3 +70,13 @@ export default class Layout extends Component {
     )
   }
 }
+
+Layout.contextTypes = {
+  metadata: PropTypes.object.isRequired,
+}
+
+Layout.propTypes = {
+  children: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
+}
+
+export default Layout

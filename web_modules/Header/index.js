@@ -9,7 +9,7 @@ export default class Header extends Component {
   render() {
 
     return (
-      <header className={ styles.header }>
+      <header>
         <nav className={ styles.nav }>
           <div className={ styles.navPart1 }>
             <a
@@ -17,20 +17,21 @@ export default class Header extends Component {
               className={ styles.link }
             >
               <img src="assets/nordlogo.svg" />
+              <p>Nord Software</p>
             </a>
           </div>
           <div className={ styles.navPart2 }>
               <a
-                href={ "http://nordsoftware.com/en/about-us/" }
+                href={ "https://github.com/nordsoftware/" }
                 className={ styles.link }
               >
-                  { "About us" }
+                <img src="assets/github.svg" />
               </a>
               <a
-                href={ "http://nordsoftware.com/en/blog/" }
+                href={ "https://twitter.com/nordsoftware" }
                 className={ styles.link }
               >
-                  { "Blog" }
+                <img src="assets/twitter.svg" />
               </a>
           </div>
         </nav>

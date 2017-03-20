@@ -1,28 +1,11 @@
-:root {
-  --nav-item-padding: 1rem;
-}
-
-.header {
-  min-width: 400px;
-  color: #eee;
-  background: #111;
-
-  img{
-    max-height: 40px;
-    margin-top: 15px;
-    margin-bottom: 20px;
-  }
-}
+@import '../../content/styles/setting';
 
 .nav {
+  padding: 2.25rem;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-
-  max-width: calc(90rem + (var(--nav-item-padding) * 2));
-  margin: 0 auto 1rem;
-  padding: 0 1rem;
-  line-height: 3rem;
+  background-color: $gray;
+  border-bottom: 1px solid $gray-5;
 }
 
 .navPart1,
@@ -31,16 +14,32 @@
   flex-direction: row;
 }
 
+.navPart1 {
+  display: flex;
+  p {
+    margin: 0;
+    margin-left: .75rem;
+    line-height: 2rem;
+    color: $white;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+}
+
+.navPart2 {
+  a {
+    padding-left: 3rem;
+  }
+}
 .link {
   display: flex;
   align-items: center;
+}
 
-  padding: 0 var(--nav-item-padding);
-  font-size: 1.5rem;
-  color: inherit;
-  text-decoration: none;
-  &:hover{
-    text-decoration: none;
-    color: #00aebe;
+@media only screen and (max-width: 40rem) {
+  .navPart1 {
+    p {
+      display:none;
+    }
   }
 }
