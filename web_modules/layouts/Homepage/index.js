@@ -1,38 +1,16 @@
 import React, { Component, PropTypes } from "react"
-import InfiniteScroll from "react-infinite-scroller"
-import { connect } from "react-redux"
 import Helmet from "react-helmet"
 import { joinUri } from "phenomic"
 
+import repoData from "../../app/api/cache.json"
+
 import "../../../browserconfig.xml"
 
-import { fetchRepoData } from "../../app/api/api"
-import { fetchData, stopFetchingData } from "../../app/actions"
 import RepoList from "../../RepoList"
 
 class Homepage extends Component {
-  componentDidMount() {
-    const { dispatch } = this.props
-    fetchRepoData(0).then((data) => {
-      dispatch(fetchData(data))
-      if (data.length < 1) {
-        dispatch(stopFetchingData())
-      }
-    })
-  }
-
-  loadRepoData(pageNum) {
-    const { dispatch } = this.props
-    fetchRepoData(pageNum).then((data) => {
-      dispatch(fetchData(data))
-      if (data.length < 30) {
-        dispatch(stopFetchingData())
-      }
-    })
-  }
 
   render() {
-    const { filterData, hasMore } = this.props
     const { props, context } = this
 
     const {
@@ -85,13 +63,7 @@ class Homepage extends Component {
         </div>
         <div className="row">
           <div className="col-sm-12 repo-container">
-            <InfiniteScroll
-              pageStart={ 0 }
-              loadMore={ this.loadRepoData.bind(this) }
-              hasMore={ hasMore }
-            >
-                <RepoList repoList={ filterData } />
-            </InfiniteScroll>
+            <RepoList repoList={ repoData } />
           </div>
         </div>
       </div>
@@ -104,18 +76,4 @@ Homepage.contextTypes = {
   metadata: PropTypes.object.isRequired,
 }
 
-Homepage.propTypes = {
-  dispatch: PropTypes.oneOfType([ PropTypes.func, PropTypes.object ]),
-  repoData: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
-  filterData: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
-  hasMore: PropTypes.bool,
-}
-function mapStateToProps(state) {
-  return {
-    repoData: state.repoReducer.repoData,
-    filterData: state.repoReducer.filterData,
-    hasMore: state.repoReducer.hasMore,
-  }
-}
-
-export default connect(mapStateToProps)(Homepage)
+export default Homepage

@@ -1,0 +1,114 @@
+[
+	{
+		"id": 53199214,
+		"url": "https://github.com/nordsoftware/lumen-fractal",
+		"name": "lumen-fractal",
+		"description": "Fractal module for the Lumen PHP framework.",
+		"star": 23,
+		"watcher": 23
+	},
+	{
+		"id": 60605978,
+		"url": "https://github.com/nordsoftware/lumen-sparkpost",
+		"name": "lumen-sparkpost",
+		"description": "SparkPost module for the Lumen PHP framework.",
+		"star": 15,
+		"watcher": 15
+	},
+	{
+		"id": 53612920,
+		"url": "https://github.com/nordsoftware/react-foundation",
+		"name": "react-foundation",
+		"description": "Foundation as React components.",
+		"star": 224,
+		"watcher": 224
+	},
+	{
+		"id": 58546352,
+		"url": "https://github.com/nordsoftware/redux-fetch-data",
+		"name": "redux-fetch-data",
+		"description": "Redux utility library for fetching data using promises on both server and client.",
+		"star": 38,
+		"watcher": 38
+	},
+	{
+		"id": 37920879,
+		"url": "https://github.com/nordsoftware/lumen-core",
+		"name": "lumen-core",
+		"description": "Core module for the Lumen PHP framework.",
+		"star": 25,
+		"watcher": 25
+	},
+	{
+		"id": 35571263,
+		"url": "https://github.com/nordsoftware/lumen-cors",
+		"name": "lumen-cors",
+		"description": "CORS module for the Lumen PHP framework.",
+		"star": 53,
+		"watcher": 53
+	},
+	{
+		"id": 35571355,
+		"url": "https://github.com/nordsoftware/lumen-doctrine",
+		"name": "lumen-doctrine",
+		"description": "Doctrine module for the Lumen PHP framework.",
+		"star": 41,
+		"watcher": 41
+	},
+	{
+		"id": 46935324,
+		"url": "https://github.com/nordsoftware/lumen-elasticsearch",
+		"name": "lumen-elasticsearch",
+		"description": "Simple wrapper of https://github.com/elastic/elasticsearch-php for the Lumen PHP framework.",
+		"star": 32,
+		"watcher": 32
+	},
+	{
+		"id": 38572466,
+		"url": "https://github.com/nordsoftware/lumen-file-manager",
+		"name": "lumen-file-manager",
+		"description": "File manager module for the Lumen PHP framework.",
+		"star": 34,
+		"watcher": 34
+	},
+	{
+		"id": 38572488,
+		"url": "https://github.com/nordsoftware/lumen-image-manager",
+		"name": "lumen-image-manager",
+		"description": "Image manager module for the Lumen PHP framework.",
+		"star": 25,
+		"watcher": 25
+	},
+	{
+		"id": 35571322,
+		"url": "https://github.com/nordsoftware/lumen-oauth2",
+		"name": "lumen-oauth2",
+		"description": "OAuth2 module for the Lumen PHP framework.",
+		"star": 25,
+		"watcher": 25
+	},
+	{
+		"id": 37718430,
+		"url": "https://github.com/nordsoftware/lumen-rbac",
+		"name": "lumen-rbac",
+		"description": "RBAC module for the Lumen PHP framework based on Overseer.",
+		"star": 24,
+		"watcher": 24
+	},
+	{
+		"id": 40891300,
+		"url": "https://github.com/nordsoftware/lumen-search",
+		"name": "lumen-search",
+		"description": "Search module for the Lumen PHP framework.",
+		"star": 31,
+		"watcher": 31
+	},
+	{
+		"id": 47612236,
+		"url": "https://github.com/nordsoftware/react-starter",
+		"name": "react-starter",
+		"description": "Our starter template for immutable React applications with Redux.",
+		"star": 65,
+		"watcher": 65
+	}
+]

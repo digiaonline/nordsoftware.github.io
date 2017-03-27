@@ -16,7 +16,7 @@ export default class Header extends Component {
               href={ "http://nordsoftware.com/en/" }
               className={ styles.link }
             >
-              <img src="assets/nordlogo.svg" />
+              <img src="/assets/nordlogo.svg" />
               <p>Nord Software</p>
             </a>
           </div>
@@ -25,13 +25,13 @@ export default class Header extends Component {
                 href={ "https://github.com/nordsoftware/" }
                 className={ styles.link }
               >
-                <img src="assets/github.svg" />
+                <img src="/assets/github.svg" />
               </a>
               <a
                 href={ "https://twitter.com/nordsoftware" }
                 className={ styles.link }
               >
-                <img src="assets/twitter.svg" />
+                <img src="/assets/twitter.svg" />
               </a>
           </div>
         </nav>

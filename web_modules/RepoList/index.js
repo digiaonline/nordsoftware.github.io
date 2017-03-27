@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from "react"
+import { Link } from "react-router"
 
 class RepoList extends Component {
   static propTypes = {
     repoList: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
   }
-
   render() {
     return (
       <div>
@@ -12,19 +12,20 @@ class RepoList extends Component {
         return (
           <div key={ index } className="col-sm-12 col-md-6 col-lg-4">
             <div className="repobox" >
-              <a href={ repo.html_url }>
+              <Link to={ `/repo/${repo.id}` }>
                 <p>{ repo.name }</p>
                 <p>{ repo.description }</p>
-              </a>
+              </Link>
+
               <div className="repobox--icons">
-                <a href={ `${ repo.html_url }/stargazers` } >
+                <a href={ `${ repo.url }/stargazers` } >
                   <img src="assets/star.svg" />
-                  { repo.stargazers_count }
+                  { repo.star }
                 </a>
                 &nbsp;
-                <a href={ `${ repo.html_url }/watchers` } >
+                <a href={ `${ repo.url }/watchers` } >
                   <img src="assets/download.svg" />
-                  { repo.watchers_count }
+                  { repo.watcher }
                 </a>
               </div>
             </div>
