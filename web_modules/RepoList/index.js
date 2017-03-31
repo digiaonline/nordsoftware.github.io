@@ -13,7 +13,7 @@ class RepoList extends Component {
           <div key={ index } className="col-sm-12 col-md-6 col-lg-4">
             <div className="repobox" >
               <Link to={ `/repo/${repo.id}` }>
-                <p>{ repo.name }</p>
+                <p><img src="assets/play.svg" />{ repo.name }</p>
                 <p>{ repo.description }</p>
               </Link>
 

@@ -22,12 +22,31 @@ class RepoDetail extends React.Component {
   render() {
     const { currentRepo } = this.state
     return (
-      <div className="repo-detail">
-        <div className="repo-detail__hero col-md-8">
-          <a href={ currentRepo.url }>{ currentRepo.name }</a>
-          <p> { currentRepo.description }</p>
+    <div className="repo-detail">
+      <div className="row hero-container">
+        <div className="col-md-8">
+          <div className="hero">
+            <div className="content">
+              <h1>{ currentRepo.name }</h1>
+              <p className="ingress">
+                { currentRepo.description }
+              </p>
+            </div>
+          </div>
         </div>
-      </div>)
+        <div className="rotating-box animated infinite flash" />
+      </div>
+      <div className="row">
+        <div className="col-sm-12 repo-detail__moreinfo">
+          <div className="repo-detail__custom-description col-md-8">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non molestiae, dolore? Quisquam voluptatibus
+          </div>
+          <div className="repo-detail__box col-md-4">
+            
+          </div>
+        </div>
+      </div>
+    </div>)
   }
 }
 

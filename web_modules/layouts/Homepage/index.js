@@ -52,7 +52,7 @@ class Homepage extends Component {
           <div className="col-md-8">
             <div className="hero">
               <div className="content">
-                <h1>OPEN SOURCE</h1>
+                <h1>Open Source_</h1>
                 <p className="ingress">
                   Our products and libraries are used by thousands of individuals, teams, and companies including Dropbox and.
                 </p>

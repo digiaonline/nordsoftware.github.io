@@ -36,6 +36,13 @@
   align-items: center;
 }
 
+.square {
+  background: $blue;
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
 @media only screen and (max-width: 40rem) {
   .navPart1 {
     p {

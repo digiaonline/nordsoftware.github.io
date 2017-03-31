@@ -113,7 +113,7 @@ body {
 }
 
 .hero-container {
- background-color: $gray;
+ background-color: $blue;
 }
 
 .repo-container {
@@ -142,14 +142,19 @@ body {
       font-size: 1.125rem;
       line-height: 1.75rem;
 
-      &:first-child {
+      &:first-of-type {
+        display: flex;
+        align-items: center;
+        img{
+          padding-right: 10px;
+        }
         font-size: 1.375em;
         color: $blue;
         font-weight: 500;
         line-height: 2.5rem;
       }
 
-      &:nth-child(2) {
+      &:last-of-type {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -215,6 +220,110 @@ to {
 .flash {
   -webkit-animation-name: flash;
   animation-name: flash;
+}
+
+.line{
+background:white;
+position:absolute;
+-webkit-animation-fill-mode: both;
+animation-fill-mode: both;
+}
+
+.l{ transform-origin:top; height:15px; width:3px; top:10px; left:7px; }
+
+.r{ transform-origin:bottom; height:15px; width:3px; top:7px; right:7px; }
+
+.t{ transform-origin:right; width:10px; height:3px; top:7px; left:7px;}
+
+.b{ transform-origin:left; width:10px; height:3px; bottom:7px; right:7px; }
+
+.m-l{ transform-origin:top; height:13px; width:3px; top:12px; left:12px; }
+
+.m-r{  transform-origin:bottom; height:13px; width:3px; top:7px; right:12px; }
+
+.third {
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+  -webkit-animation-delay: 1.15s; /* Safari 4.0 - 8.0 */
+  animation-delay: 1.15s;
+  -webkit-animation-timing-function: ease-out; /* Safari 4.0 - 8.0 */
+animation-timing-function: ease-out;
+}
+
+.second {
+-webkit-animation-duration: .5s;
+animation-duration: .5s;
+-webkit-animation-delay: .96s; /* Safari 4.0 - 8.0 */
+animation-delay: .65s;
+-webkit-animation-timing-function: ease; /* Safari 4.0 - 8.0 */
+animation-timing-function: ease;
+}
+
+.first {
+-webkit-animation-duration: .65s;
+animation-duration: .65s;
+-webkit-animation-timing-function: ease-in; /* Safari 4.0 - 8.0 */
+animation-timing-function: ease-in;
+}
+
+@-webkit-keyframes y {
+  from {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  to {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes y {
+  from {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+
+  to {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+.y {
+  -webkit-animation-name: y;
+  animation-name: y;
+}
+
+
+@-webkit-keyframes x {
+  from {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+
+  to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+@keyframes x {
+  from {
+
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+
+  to {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+.x {
+  -webkit-animation-name: x;
+  animation-name: x;
 }
 
 @media only screen and (max-width: 40rem) {
