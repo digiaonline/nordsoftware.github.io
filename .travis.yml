@@ -17,4 +17,4 @@ env:
     - secure: >-
         SHDtejBFsNgmcee4GvGf2Se6pHMlSHzpXtKaUv1obheVKnaM+vWnpaD1GcJtHEvOV/xOH18uYRZFAJqOmMYKwz1iL1MNyvuKQMWZFbkHI2MBpXzILDTWnbM18mKI1+QIHbFrZfKr5FwgjJ94WvWLAbWqDE/fAzxXKAF9u9whHSTIaIY0HvF232TbsTyeN+mxLEY9zbtfYynI36Svtj1+PudTL8FX3yszdgfPcFDEwAlGqjRLsBQnEKKsOxcAH/LsKkqMyBC5Svi7+MXXhGrQvFwaCrMtMsBHY/GfvaeVaeLrM/YOmIXi+tCJTlLN8S5QYBXGkY+7RY4H48e8UnkSp8WP6VX9FBlplAhZ8ihvTFuKdn7Eo/ISzUiMZ9d2K1UnNbxMdU+VGfHqvRyJt5FMju8XzIDCpQrluHb3SOJZ5dFM9P1Gbt30q+bWn99KZEjldax/JzmLekc1/anttjerRbxgxZPlyrVnAbL4UC/TrDKTE23fik6lQkNDLc893DJvgpaEzleYuPXVUDMifQgPtE0YqpmKd5x3jy6YdquF5gej8oRRTfoxlicqGquHM0V0odhUzXYYuis/w+g0cm68CkFmK/Az+aBqO0lzPtrWO519bnSSEfbPfGWvjAOgojE3vcoD0ekvs8hkcDVc/uxS0wzdli9Al/6DIX8e+OfTxzQ=
     # UPDATE YOU/YOUR_REPO IN THE URL BELOW
-    - GIT_DEPLOY_REPO=https://$f696d14cebe733c0326080a9685c3fc9d7ae4f3d@github.com/nordsoftware/nordsoftware.github.io.git
+    - GIT_DEPLOY_REPO=https://$GITHUB_TOKEN@github.com/nordsoftware/nordsoftware.github.io.git
