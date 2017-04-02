@@ -4,8 +4,8 @@ GIT_DEPLOY_REPO=${GIT_DEPLOY_REPO:-$(node -e 'process.stdout.write(require("./pa
 if [ "$TRAVIS" = "true" ]
 then
   # git need this, on Travis-CI nobody is defined
-  git config --global user.name "Travis CI" && \
-  git config --global user.email "travis@travis-ci.org"
+  git config --global user.name "Chi Nguyen" && \
+  git config --global user.email "chi.nguyen@nordsoftware.com"
 fi
 
 cd dist && \
