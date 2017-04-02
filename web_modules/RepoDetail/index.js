@@ -39,10 +39,17 @@ class RepoDetail extends React.Component {
       <div className="row">
         <div className="col-sm-12 repo-detail__moreinfo">
           <div className="repo-detail__custom-description col-md-8">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non molestiae, dolore? Quisquam voluptatibus
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non molestiae, dolore? Quisquam voluptatibus</p>
           </div>
-          <div className="repo-detail__box col-md-4">
-            
+          <div className="col-md-4">
+            <div className="repo-detail__box">
+              <a href={ currentRepo.url }>
+                <h2>{ currentRepo.name }</h2>
+              </a>
+              <p className="ingress">
+                { currentRepo.description }
+              </p>
+            </div>
           </div>
         </div>
       </div>
