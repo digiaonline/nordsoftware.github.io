@@ -10,7 +10,7 @@ deploy:
   provider: script
   script: ./scripts/deploy.sh
   'on':
-    branch: master
+    branch: src
     node: '5'
 env:
   global:
