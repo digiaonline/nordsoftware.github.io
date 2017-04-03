@@ -1,7 +1,7 @@
 export function fetchRepoData(page) {
   return fetch(
     "https://api.github.com/orgs/nordsoftware/repos" + "?page=" + page +
-    "&access_token=" + "2199dcb3e3523d9c8a31c6c5567c88eb34840cc5"
+    "&access_token=" + "7ae90da9d34c9b25fc80b4be439df3cc4d9c27b9"
   )
     .then((response) => response.json())
     .then((data) => {
