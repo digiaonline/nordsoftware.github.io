@@ -109,7 +109,8 @@ body {
 }
 
 .hero-container {
- background-color: $blue;
+  margin: 0;
+  background: linear-gradient(to top right, $pink , $blue-5);
 }
 
 .repo-container {

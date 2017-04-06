@@ -6,6 +6,7 @@ import repoData from "../../app/api/cache.json"
 
 import "../../../browserconfig.xml"
 
+import Header from "../../Header"
 import RepoList from "../../RepoList"
 
 class Homepage extends Component {
@@ -49,6 +50,7 @@ class Homepage extends Component {
           meta={ meta }
         />
         <div className="row hero-container">
+          <Header />
           <div className="col-md-8">
             <div className="hero">
               <div className="content">
