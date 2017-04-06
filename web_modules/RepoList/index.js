@@ -1,6 +1,10 @@
 import React, { Component, PropTypes } from "react"
 import { Link } from "react-router"
 
+import styles from "./index.scss"
+
+import ReactIcon from "../../web_modules/Rect"
+
 class RepoList extends Component {
   static propTypes = {
     repoList: PropTypes.oneOfType([ PropTypes.array, PropTypes.object ]),
@@ -11,13 +15,13 @@ class RepoList extends Component {
       { this.props.repoList.map((repo, index) => {
         return (
           <div key={ index } className="col-sm-12 col-md-6 col-lg-4">
-            <div className="repobox" >
+            <div className={ styles.repobox } >
               <Link to={ `/repo/${repo.id}` }>
-                <p><img src="assets/play.svg" />{ repo.name }</p>
+                <p><ReactIcon index={ index } />{ repo.name }</p>
                 <p>{ repo.description }</p>
               </Link>
 
-              <div className="repobox--icons">
+              <div className={ styles.icons }>
                 <a href={ `${ repo.url }/stargazers` } >
                   <img src="assets/star.svg" />
                   { repo.star }

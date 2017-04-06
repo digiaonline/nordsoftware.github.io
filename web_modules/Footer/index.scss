@@ -1,0 +1,28 @@
+@import '../../content/styles/setting';
+
+
+.square {
+  background: $gray;
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+.footer {
+  display: flex;
+  padding: 3rem;
+  a {
+    display: flex;
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+    }
+  }
+  p {
+    margin: 0;
+    margin-left: .75rem;
+    line-height: 2rem;
+    color: $gray;
+    font-weight: 500;
+    font-size: 1.375rem;
+  }
+}
