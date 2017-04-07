@@ -52,6 +52,23 @@ class Homepage extends Component {
   }
   render() {
     const { filterData, repoData, hasMore } = this.props
+
+    // const cache = repoData.map(repo => ({
+    //   id: repo.id,
+    //   url: repo.url,
+    //   name: repo.name,
+    //   description: repo.description,
+    //   stars: repo.stargazers_count,
+    //   watchers: repo.watchers,
+    //   forks:repo.forks,
+    //   open_issues: repo.open_issues_count,
+    //   custom_description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae placeat ipsam ab reprehenderit, \
+    //                        nobis dolore ipsa saepe, illum maxime odio, \
+    //                        cum tenetur dolorum ullam distinctio doloremque optio similique omnis.",
+    //   links: [],
+    // }))
+    // console.log(JSON.stringify(cache, null, "\t"))
+
     const languages = uniq(map(flatten(repoData), "language"))
     const { props, context } = this
 

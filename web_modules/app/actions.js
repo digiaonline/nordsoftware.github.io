@@ -4,20 +4,14 @@ export const STOP_FETCH = "STOP_FETCH"
 export const FILTER_BY = "FILTER_BY"
 
 const featureRepos = [
-  "lumen-core",
+  "react-boilerplate",
+  "react-flow-types",
+  "react-foundation",
   "lumen-cors",
-  "lumen-doctrine",
   "lumen-elasticsearch",
-  "lumen-file-manager",
-  "lumen-fractal",
-  "lumen-image-manager",
+  "lumen-newrelic",
   "lumen-oauth2",
   "lumen-rbac",
-  "lumen-search",
-  "lumen-sparkpost",
-  "react-foundation",
-  "react-starter",
-  "redux-fetch-data",
 ]
 
 export const fetchData = (data) => {
