@@ -1,5 +1,9 @@
 import React, { PropTypes } from "react"
 import repoList from "../app/api/cache.json"
+import Header from "../../web_modules/Header"
+import RectIcon from "../../web_modules/Rect"
+
+import styles from "./index.scss"
 
 class RepoDetail extends React.Component {
   constructor(props) {
@@ -12,7 +16,7 @@ class RepoDetail extends React.Component {
   componentWillMount() {
     const { repoId } = this.props.params
 
-    const currentRepo = repoList.find(repo => repo.id === parseInt(repoId))
+    const currentRepo = repoList[repoId]
 
     this.setState({
       currentRepo : currentRepo,
@@ -21,34 +25,69 @@ class RepoDetail extends React.Component {
 
   render() {
     const { currentRepo } = this.state
+    const { repoId } = this.props.params
+
     return (
-    <div className="repo-detail">
+    <div className={ styles.repoDetail }>
       <div className="row hero-container">
+        <Header />
         <div className="col-md-8">
-          <div className="hero">
-            <div className="content">
-              <h1>{ currentRepo.name }</h1>
-              <p className="ingress">
-                { currentRepo.description }
-              </p>
-            </div>
+          <div className={ styles.repoDetail__content }>
+            <h1><RectIcon index={ parseInt(repoId) } />{ currentRepo.name }</h1>
+            <p className={ styles.repoDetail__ingress }>
+              { currentRepo.description }
+            </p>
           </div>
         </div>
         <div className="rotating-box animated infinite flash" />
       </div>
       <div className="row">
-        <div className="col-sm-12 repo-detail__moreinfo">
-          <div className="repo-detail__custom-description col-md-8">
+        <div className={ `col-sm-12 ${ styles.repoDetail__moreinfo }` }>
+          <div className={ `${ styles.repoDetail__customDescription } col-md-8` }>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non molestiae, dolore? Quisquam voluptatibus</p>
+
+            { currentRepo.links && currentRepo.links.length &&
+              <div className={ styles.links }>
+                <h2>Related links</h2>
+                { currentRepo.links.map((link, index) => {
+                  return (
+                    <a href="link.url" key={ index }>{ link.title }</a>
+                  )
+                })
+                }
+              </div>
+            }
           </div>
           <div className="col-md-4">
-            <div className="repo-detail__box">
-              <a href={ currentRepo.url }>
-                <h2>{ currentRepo.name }</h2>
+            <div className={ styles.repoDetail__box }>
+              <div className={ styles.padding }>
+                <a href={ currentRepo.url }>
+                  <h2>{ currentRepo.name }</h2>
+                </a>
+                <a href={ currentRepo.url }>
+                  <p>github.com/nordsoftware/{ currentRepo.name }</p>
+                </a>
+                <div className={ styles.stats }>
+                  <div className={ styles.stars }>
+                    <p>{ currentRepo.star }</p>
+                    <p>Stars</p>
+                  </div>
+
+                  <div className={ styles.watchers }>
+                    <p>{ currentRepo.watcher }</p>
+                    <p>Watchers</p>
+                  </div>
+
+                  <div className={ styles.contributors }>
+                    <p>{ currentRepo.watcher }</p>
+                    <p>contributors</p>
+                  </div>
+                </div>
+              </div>
+
+              <a className={ styles.github }href={ currentRepo.url }>
+                  View in Github ->
               </a>
-              <p className="ingress">
-                { currentRepo.description }
-              </p>
             </div>
           </div>
         </div>

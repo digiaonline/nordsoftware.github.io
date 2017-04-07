@@ -16,7 +16,7 @@ class RepoList extends Component {
         return (
           <div key={ index } className="col-sm-12 col-md-6 col-lg-4">
             <div className={ styles.repobox } >
-              <Link to={ `/repo/${repo.id}` }>
+              <Link to={ `/repo/${index}` }>
                 <p><ReactIcon index={ index } />{ repo.name }</p>
                 <p>{ repo.description }</p>
               </Link>

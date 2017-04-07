@@ -25,7 +25,7 @@ body {
   margin: 0;
   padding: 0;
 }
-p, span, h3, h1, a, li{
+p, span, h3, h2, h1, a, li{
   font-family: 'Roboto', sans-serif !important;
 }
 /*
@@ -113,7 +113,6 @@ body {
 
 .hero {
   display: flex;
-  width: 100%;
 }
 
 .hero-container {
@@ -125,31 +124,6 @@ body {
 
 .repo-container {
   margin-top: -56px;
-}
-
-.repo-detail {
-  &__box {
-    background: white;
-    h2 {
-      color: $blue;
-      font-size: 1.375rem;
-      line-height: 2.5rem;
-      font-weight: 500;
-    }
-    p {
-      color: $gray-6;
-      font-size: 1.125rem;
-      line-height: 1.75rem;
-    }
-  }
-
-  &__custom-description {
-    p{
-      color: $black;
-      font-size: 1.75rem;
-      line-height: 3rem;
-    }
-  }
 }
 
 @-webkit-keyframes flash {
@@ -344,15 +318,6 @@ animation-timing-function: ease-in;
   .repo-container {
     margin-top: 0;
   }
-
-  .repo-detail {
-    &__box {
-      padding: 3rem;
-    }
-    &__custom-description {
-      padding: 3rem;
-    }
-  }
 }
 
 @media only screen and (min-width: 40rem) {
@@ -387,25 +352,6 @@ animation-timing-function: ease-in;
       font-size: 2.5rem;
       line-height: 4rem;
       color: white;
-    }
-  }
-
-  .repo-detail {
-    &__box {
-      padding: 3rem;
-    }
-    &__custom-description {
-      padding: 4rem;
-    }
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .repo-detail {
-    &__box {
-      padding: 3rem;
-      margin-top: -60%;
-      padding-bottom: 80%;
     }
   }
 }

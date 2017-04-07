@@ -1,0 +1,152 @@
+@import '../../content/styles/setting';
+.github {
+  color: $blue;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin: 0;
+  background-color: $blue-6;
+}
+.stats {
+  display: flex;
+  justify-content: space-between;
+  .stars, .watchers, .contributors {
+    margin-top: 1rem;
+  }
+  p {
+    &:first-of-type {
+      margin: 0;
+      font-size: 2rem;
+      line-height: 2.25rem;
+      color: $blue;
+    }
+
+    &:last-of-type {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: $gray-6;
+    }
+  }
+}
+.repoDetail {
+  h1 {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  &__content {
+    padding: 3rem;
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: white;
+    h2 {
+      color: $blue;
+      font-size: 1.375rem;
+      line-height: 2.5rem;
+      font-weight: 500;
+    }
+    p {
+      font-size: 1.125rem;
+      line-height: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__customDescription {
+    p{
+      color: $black;
+      font-size: 1.125rem;
+      line-height: 2rem;
+    }
+
+    h2 {
+      margin-top: 3rem;
+      margin-bottom: 0.5rem;
+      color: $blue;
+    }
+  }
+}
+
+@media only screen and (max-width: 40rem) {
+  .repoDetail {
+    &__box {
+      padding: 3rem;
+    }
+    &__customDescription {
+      padding: 3rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 40rem) {
+  .github {
+    padding: 2rem 3rem;
+  }
+
+  .repoDetail {
+    .padding {
+      padding: 3rem;
+    }
+    &__box {
+      h2 {
+        font-size: 1.875rem;
+        line-height: 3rem;
+        font-weight: 500;
+        color: $blue;
+        margin: 0;
+      }
+      a {
+        p{
+          font-size: 1.125rem;
+          line-height: 1.5rem;
+          color: $gray-6;
+          font-weight: 400;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+    &__customDescription {
+      padding: 4rem;
+      h2 {
+        font-size: 2rem;
+        line-height: 3rem;
+        font-weight: 500;
+      }
+    }
+
+    &__ingress {
+      font-size: 1.75rem;
+      line-height: 3rem;
+      color: white;
+    }
+
+    svg {
+      width:2.75rem;
+      height:2.75rem;
+      margin-right: 1.5rem;
+      border-radius:4px;
+    }
+    h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .repoDetail {
+    &__box {
+      margin-top: -20%;
+    }
+    .padding {
+      padding: 3rem;
+    }
+  }
+}
