@@ -24,12 +24,12 @@ class RepoList extends Component {
               <div className={ styles.icons }>
                 <a href={ `${ repo.url }/stargazers` } >
                   <img src="assets/star.svg" />
-                  { repo.star }
+                  { repo.stars }
                 </a>
                 &nbsp;
                 <a href={ `${ repo.url }/watchers` } >
                   <img src="assets/download.svg" />
-                  { repo.watcher }
+                  { repo.watchers }
                 </a>
               </div>
             </div>
