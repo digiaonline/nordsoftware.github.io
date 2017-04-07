@@ -46,56 +46,6 @@
 		"open_issues": 1,
 		"custom_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae placeat ipsam ab reprehenderit,                            nobis dolore ipsa saepe, illum maxime odio,                            cum tenetur dolorum ullam distinctio doloremque optio similique omnis.",
 		"links": []
-	}
-]
-5(unknown) [
-	{
-		"id": 35571263,
-		"url": "https://github.com/nordsoftware/lumen-cors",
-		"name": "lumen-cors",
-		"description": "CORS module for the Lumen PHP framework.",
-		"stars": 54,
-		"watchers": 54,
-		"forks": 11,
-		"open_issues": 2,
-		"custom_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae placeat ipsam ab reprehenderit,                            nobis dolore ipsa saepe, illum maxime odio,                            cum tenetur dolorum ullam distinctio doloremque optio similique omnis.",
-		"links": []
-	},
-	{
-		"id": 46935324,
-		"url": "https://github.com/nordsoftware/lumen-elasticsearch",
-		"name": "lumen-elasticsearch",
-		"description": "Simple wrapper of https://github.com/elastic/elasticsearch-php for the Lumen PHP framework.",
-		"stars": 33,
-		"watchers": 33,
-		"forks": 4,
-		"open_issues": 1,
-		"custom_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae placeat ipsam ab reprehenderit,                            nobis dolore ipsa saepe, illum maxime odio,                            cum tenetur dolorum ullam distinctio doloremque optio similique omnis.",
-		"links": []
-	},
-	{
-		"id": 35571322,
-		"url": "https://github.com/nordsoftware/lumen-oauth2",
-		"name": "lumen-oauth2",
-		"description": "OAuth2 module for the Lumen PHP framework.",
-		"stars": 26,
-		"watchers": 26,
-		"forks": 2,
-		"open_issues": 1,
-		"custom_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae placeat ipsam ab reprehenderit,                            nobis dolore ipsa saepe, illum maxime odio,                            cum tenetur dolorum ullam distinctio doloremque optio similique omnis.",
-		"links": []
-	},
-	{
-		"id": 37718430,
-		"url": "https://github.com/nordsoftware/lumen-rbac",
-		"name": "lumen-rbac",
-		"description": "RBAC module for the Lumen PHP framework based on Overseer.",
-		"stars": 24,
-		"watchers": 24,
-		"forks": 1,
-		"open_issues": 1,
-		"custom_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae placeat ipsam ab reprehenderit,                            nobis dolore ipsa saepe, illum maxime odio,                            cum tenetur dolorum ullam distinctio doloremque optio similique omnis.",
-		"links": []
 	},
 	{
 		"id": 76869635,
