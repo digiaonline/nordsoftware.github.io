@@ -37,9 +37,7 @@
     color: white;
     margin-bottom: 1rem;
   }
-  &__content {
-    padding: 3rem;
-  }
+
   &__box {
     display: flex;
     flex-direction: column;
@@ -75,12 +73,40 @@
 }
 
 @media only screen and (max-width: 40rem) {
+  .wrapper {
+    padding: 0;
+  }
   .repoDetail {
+    .padding {
+      padding: 2rem;
+    }
+
+    .github {
+      padding: 1.5rem 2rem;
+    }
+
     &__box {
-      padding: 3rem;
+      margin-bottom: 2rem;
     }
     &__customDescription {
-      padding: 3rem;
+      padding: 2rem;
+    }
+
+    &__content {
+      padding: 2rem;
+    }
+
+    svg {
+      width:1.5rem;
+      height:1.5rem;
+      margin-right: 0.75rem;
+      border-radius:2px;
+    }
+
+    &__ingress {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      color: white;
     }
   }
 }
@@ -90,10 +116,18 @@
     padding: 2rem 3rem;
   }
 
+  .stats {
+    margin: 2rem 0;
+  }
   .repoDetail {
     .padding {
       padding: 3rem;
     }
+
+    &__content {
+      padding: 3rem;
+    }
+
     &__box {
       h2 {
         font-size: 1.875rem;
@@ -142,11 +176,21 @@
 
 @media only screen and (min-width: 992px) {
   .repoDetail {
-    &__box {
-      margin-top: -20%;
-    }
     .padding {
       padding: 3rem;
     }
+  }
+}
+
+@media only screen and (min-width : 1200px) {
+  .repoDetail {
+    &__box {
+      margin-top: -20%;
+      margin-bottom: 30%;
+    }
+  }
+
+  .stats {
+    margin: 0;
   }
 }

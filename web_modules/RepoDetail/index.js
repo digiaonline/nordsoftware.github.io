@@ -29,9 +29,9 @@ class RepoDetail extends React.Component {
 
     return (
     <div className={ styles.repoDetail }>
-      <div className="row hero-container">
+      <div className="clearfix hero-container">
         <Header />
-        <div className="col-md-8">
+        <div className={ `col-md-8 ${ styles.wrapper }` }>
           <div className={ styles.repoDetail__content }>
             <h1><RectIcon index={ parseInt(repoId) } />{ currentRepo.name }</h1>
             <p className={ styles.repoDetail__ingress }>
@@ -41,9 +41,9 @@ class RepoDetail extends React.Component {
         </div>
         <div className="rotating-box animated infinite flash" />
       </div>
-      <div className="row">
+      <div className="clearfix">
         <div className={ `col-sm-12 ${ styles.repoDetail__moreinfo }` }>
-          <div className={ `${ styles.repoDetail__customDescription } col-md-8` }>
+          <div className={ `${ styles.repoDetail__customDescription } col-sm-12 col-lg-8` }>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non molestiae, dolore? Quisquam voluptatibus</p>
 
             { currentRepo.links && currentRepo.links.length &&
@@ -58,7 +58,7 @@ class RepoDetail extends React.Component {
               </div>
             }
           </div>
-          <div className="col-md-4">
+          <div className="col-sm-12 col-lg-4">
             <div className={ styles.repoDetail__box }>
               <div className={ styles.padding }>
                 <a href={ currentRepo.url }>
