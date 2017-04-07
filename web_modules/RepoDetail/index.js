@@ -44,9 +44,9 @@ class RepoDetail extends React.Component {
       <div className="clearfix">
         <div className={ `col-sm-12 ${ styles.repoDetail__moreinfo }` }>
           <div className={ `${ styles.repoDetail__customDescription } col-sm-12 col-lg-8` }>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non molestiae, dolore? Quisquam voluptatibus</p>
+            <p>{ currentRepo.custom_description }</p>
 
-            { currentRepo.links && currentRepo.links.length &&
+            { currentRepo.links && !!currentRepo.links.length &&
               <div className={ styles.links }>
                 <h2>Related links</h2>
                 { currentRepo.links.map((link, index) => {
@@ -69,18 +69,18 @@ class RepoDetail extends React.Component {
                 </a>
                 <div className={ styles.stats }>
                   <div className={ styles.stars }>
-                    <p>{ currentRepo.star }</p>
+                    <p>{ currentRepo.stars }</p>
                     <p>Stars</p>
                   </div>
 
                   <div className={ styles.watchers }>
-                    <p>{ currentRepo.watcher }</p>
+                    <p>{ currentRepo.watchers }</p>
                     <p>Watchers</p>
                   </div>
 
                   <div className={ styles.contributors }>
-                    <p>{ currentRepo.watcher }</p>
-                    <p>contributors</p>
+                    <p>{ currentRepo.forks }</p>
+                    <p>Forks</p>
                   </div>
                 </div>
               </div>

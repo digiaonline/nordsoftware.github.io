@@ -1,114 +1,98 @@
 [
 	{
-		"id": 53199214,
-		"url": "https://github.com/nordsoftware/lumen-fractal",
-		"name": "lumen-fractal",
-		"description": "Fractal module for the Lumen PHP framework.",
-		"star": 23,
-		"watcher": 23
-	},
-	{
-		"id": 60605978,
-		"url": "https://github.com/nordsoftware/lumen-sparkpost",
-		"name": "lumen-sparkpost",
-		"description": "SparkPost module for the Lumen PHP framework.",
-		"star": 15,
-		"watcher": 15
-	},
-	{
-		"id": 53612920,
-		"url": "https://github.com/nordsoftware/react-foundation",
-		"name": "react-foundation",
-		"description": "Foundation as React components.",
-		"star": 224,
-		"watcher": 224
-	},
-	{
-		"id": 58546352,
-		"url": "https://github.com/nordsoftware/redux-fetch-data",
-		"name": "redux-fetch-data",
-		"description": "Redux utility library for fetching data using promises on both server and client.",
-		"star": 38,
-		"watcher": 38
-	},
-	{
-		"id": 37920879,
-		"url": "https://github.com/nordsoftware/lumen-core",
-		"name": "lumen-core",
-		"description": "Core module for the Lumen PHP framework.",
-		"star": 25,
-		"watcher": 25
-	},
-	{
 		"id": 35571263,
-		"url": "https://github.com/nordsoftware/lumen-cors",
+		"url": "https://api.github.com/repos/nordsoftware/lumen-cors",
 		"name": "lumen-cors",
 		"description": "CORS module for the Lumen PHP framework.",
-		"star": 53,
-		"watcher": 53
-	},
-	{
-		"id": 35571355,
-		"url": "https://github.com/nordsoftware/lumen-doctrine",
-		"name": "lumen-doctrine",
-		"description": "Doctrine module for the Lumen PHP framework.",
-		"star": 41,
-		"watcher": 41
+		"stars": 54,
+		"watchers": 54,
+		"forks": 11,
+		"open_issues": 2,
+		"custom_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae placeat ipsam ab reprehenderit,                            nobis dolore ipsa saepe, illum maxime odio,                            cum tenetur dolorum ullam distinctio doloremque optio similique omnis.",
+		"links": []
 	},
 	{
 		"id": 46935324,
-		"url": "https://github.com/nordsoftware/lumen-elasticsearch",
+		"url": "https://api.github.com/repos/nordsoftware/lumen-elasticsearch",
 		"name": "lumen-elasticsearch",
 		"description": "Simple wrapper of https://github.com/elastic/elasticsearch-php for the Lumen PHP framework.",
-		"star": 32,
-		"watcher": 32
-	},
-	{
-		"id": 38572466,
-		"url": "https://github.com/nordsoftware/lumen-file-manager",
-		"name": "lumen-file-manager",
-		"description": "File manager module for the Lumen PHP framework.",
-		"star": 34,
-		"watcher": 34
-	},
-	{
-		"id": 38572488,
-		"url": "https://github.com/nordsoftware/lumen-image-manager",
-		"name": "lumen-image-manager",
-		"description": "Image manager module for the Lumen PHP framework.",
-		"star": 25,
-		"watcher": 25
+		"stars": 33,
+		"watchers": 33,
+		"forks": 4,
+		"open_issues": 1,
+		"custom_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae placeat ipsam ab reprehenderit,                            nobis dolore ipsa saepe, illum maxime odio,                            cum tenetur dolorum ullam distinctio doloremque optio similique omnis.",
+		"links": []
 	},
 	{
 		"id": 35571322,
-		"url": "https://github.com/nordsoftware/lumen-oauth2",
+		"url": "https://api.github.com/repos/nordsoftware/lumen-oauth2",
 		"name": "lumen-oauth2",
 		"description": "OAuth2 module for the Lumen PHP framework.",
-		"star": 25,
-		"watcher": 25
+		"stars": 26,
+		"watchers": 26,
+		"forks": 2,
+		"open_issues": 1,
+		"custom_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae placeat ipsam ab reprehenderit,                            nobis dolore ipsa saepe, illum maxime odio,                            cum tenetur dolorum ullam distinctio doloremque optio similique omnis.",
+		"links": []
 	},
 	{
 		"id": 37718430,
-		"url": "https://github.com/nordsoftware/lumen-rbac",
+		"url": "https://api.github.com/repos/nordsoftware/lumen-rbac",
 		"name": "lumen-rbac",
 		"description": "RBAC module for the Lumen PHP framework based on Overseer.",
-		"star": 24,
-		"watcher": 24
+		"stars": 24,
+		"watchers": 24,
+		"forks": 1,
+		"open_issues": 1,
+		"custom_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae placeat ipsam ab reprehenderit,                            nobis dolore ipsa saepe, illum maxime odio,                            cum tenetur dolorum ullam distinctio doloremque optio similique omnis.",
+		"links": []
 	},
 	{
-		"id": 40891300,
-		"url": "https://github.com/nordsoftware/lumen-search",
-		"name": "lumen-search",
-		"description": "Search module for the Lumen PHP framework.",
-		"star": 31,
-		"watcher": 31
+		"id": 76869635,
+		"url": "https://api.github.com/repos/nordsoftware/react-boilerplate",
+		"name": "react-boilerplate",
+		"description": "Boilerplate for our React applications",
+		"stars": 21,
+		"watchers": 21,
+		"forks": 5,
+		"open_issues": 3,
+		"custom_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae placeat ipsam ab reprehenderit,                            nobis dolore ipsa saepe, illum maxime odio,                            cum tenetur dolorum ullam distinctio doloremque optio similique omnis.",
+		"links": []
 	},
 	{
-		"id": 47612236,
-		"url": "https://github.com/nordsoftware/react-starter",
-		"name": "react-starter",
-		"description": "Our starter template for immutable React applications with Redux.",
-		"star": 65,
-		"watcher": 65
+		"id": 82946072,
+		"url": "https://api.github.com/repos/nordsoftware/react-flow-types",
+		"name": "react-flow-types",
+		"description": "Flow type definitions for React",
+		"stars": 9,
+		"watchers": 9,
+		"forks": 0,
+		"open_issues": 0,
+		"custom_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae placeat ipsam ab reprehenderit,                            nobis dolore ipsa saepe, illum maxime odio,                            cum tenetur dolorum ullam distinctio doloremque optio similique omnis.",
+		"links": []
+	},
+	{
+		"id": 53612920,
+		"url": "https://api.github.com/repos/nordsoftware/react-foundation",
+		"name": "react-foundation",
+		"description": "Foundation as React components.",
+		"stars": 226,
+		"watchers": 226,
+		"forks": 20,
+		"open_issues": 9,
+		"custom_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae placeat ipsam ab reprehenderit,                            nobis dolore ipsa saepe, illum maxime odio,                            cum tenetur dolorum ullam distinctio doloremque optio similique omnis.",
+		"links": []
+	},
+	{
+		"id": 75941766,
+		"url": "https://api.github.com/repos/nordsoftware/lumen-newrelic",
+		"name": "lumen-newrelic",
+		"description": "New Relic instrumentation for the Lumen framework",
+		"stars": 5,
+		"watchers": 5,
+		"forks": 0,
+		"open_issues": 1,
+		"custom_description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae placeat ipsam ab reprehenderit,                            nobis dolore ipsa saepe, illum maxime odio,                            cum tenetur dolorum ullam distinctio doloremque optio similique omnis.",
+		"links": []
 	}
 ]
